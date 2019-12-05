@@ -9,25 +9,26 @@ export default class Counter extends React.Component {
   }
 
   increment = () => {
-    this.setState({counter : this.state.counter + 1});
-  }
+    this.setState({ counter: this.state.counter + 1 });
+  };
 
   decrement = () => {
-    if(this.state.counter > 0)
-    this.setState({ counter: this.state.counter - 1 });
-  }
- 
- render(){
-   return(
-     <div class="counter">
-     <h1> Coutner Demo </h1>
-     <h2>
-      { this.state.counter }       
-      </h2>
-      <button onClick = { this.increment } type="button">+</button>
-      <button onClick = { this.decrement } type="button">_</button>
-     </div>
-   )
- }
+    if (this.state.counter > 0)
+      this.setState({ counter: this.state.counter - 1 });
+  };
 
+  render() {
+    return (
+      <div class="counter">
+        <h1> Counter Demo </h1>
+        <h2>{this.state.counter}</h2>
+        <button onClick={this.increment} type="button">
+          +
+        </button>
+        <button onClick={this.decrement} type="button">
+          _
+        </button>
+      </div>
+    );
+  }
 }
